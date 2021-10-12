@@ -23,7 +23,7 @@ import Loading from 'library/components/Loading'
       items: null,
       loading: true,
       networkError: false,
-      policies: null,
+      policies: [null],
     }
   }
 

@@ -293,6 +293,7 @@
    return (
      <DrawerContentScrollView {...props}>
        <CustomDrawer />
+       
        <DrawerItemList {...props} />
      </DrawerContentScrollView>
    );
@@ -315,11 +316,20 @@
      return (
        <Drawer.Navigator
        drawerStyle={{ backgroundColor: "#272727" }}
+       drawerContent={(props) => <CustomDrawerContent {...props} />}
+       drawerContentOptions={{
+        labelStyle: {
+          color: R.colors.appPrimary,
+        },
+      }}
+       drawerType={"back"}
 
        >
+         
+      
          <Drawer.Screen
            name="Home"
-           component={HomeStackScreenNuser}
+           component={NoUser}
            options={{
              drawerIcon: () => (
                <Icon

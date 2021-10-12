@@ -9,6 +9,7 @@ import {
 import R from 'res/R'
 //import UserService from 'services/UserService'
 
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
@@ -55,7 +56,15 @@ export default class CustomDrawer extends Component {
       </View>
        )
 
-       return null;
+       return (
+        <View style={{ backgroundColor: '#fff', paddingLeft: 16, paddingTop: 10, paddingBottom: 10 }}>
+         <View>
+         <Icon name="chevron-circle-down" size={45} style={styles.menuIcon} color="#000" />
+           <Text style={{ color: '#000', marginTop: '3%', fontSize: 24, fontFamily: 'Segoe-UI' }}>{`PMyCar`}</Text>
+           <Text style={{ color: '#000', fontFamily: 'Segoe-UI' }}>Specialized car insurance.</Text>
+         </View>
+       </View>
+        );
     }
 }
 

@@ -63,6 +63,7 @@ class HomeScreen extends Component {
       {
         actionName: 'Insure My Car',
         icon: 'car',
+        img: 'https://firebasestorage.googleapis.com/v0/b/tikka-1f350.appspot.com/o/car.png?alt=media&token=4587fd44-146f-486f-90e6-5aadc06167a6',
         onPress : () => {
           this.props.navigation.navigate('VehicleInfo')
         },
@@ -74,6 +75,7 @@ class HomeScreen extends Component {
       {
         actionName: 'File a Claim',
         icon: 'car-crash',
+        img: 'https://firebasestorage.googleapis.com/v0/b/tikka-1f350.appspot.com/o/claim.png?alt=media&token=f24b302e-5537-4a97-970a-c6b084ff9575',
         onPress : () => {
           this.props.navigation.navigate('SelectCarScreen');
         },
@@ -85,6 +87,7 @@ class HomeScreen extends Component {
       {
         actionName: 'Get a Quote',
         icon: 'money-check',
+        img: 'https://firebasestorage.googleapis.com/v0/b/tikka-1f350.appspot.com/o/quote-request.png?alt=media&token=02c1cfa8-5cf4-4460-8d13-bb9e29484ecf',
         onPress : () => {},
         id: 3,
         cstyle: cstylew,
@@ -94,6 +97,7 @@ class HomeScreen extends Component {
       {
         actionName: 'Manage Your ID',
         icon: 'address-card',
+        img: 'https://firebasestorage.googleapis.com/v0/b/tikka-1f350.appspot.com/o/user-data.png?alt=media&token=2ad81073-977a-4f94-be68-799eb232ccee',
         onPress : () => {},
         id: 4,
         cstyle: cstyleb,
@@ -104,6 +108,7 @@ class HomeScreen extends Component {
       {
         actionName: 'Chat with Us.',
         icon: 'headset',
+        img: 'https://firebasestorage.googleapis.com/v0/b/tikka-1f350.appspot.com/o/chat.png?alt=media&token=a40ad037-5d5e-484a-b6a5-5d9ff78ca68f',
         onPress : () => {},
         id: 5,
         cstyle: cstylew,
@@ -114,6 +119,7 @@ class HomeScreen extends Component {
       {
         actionName: 'Send Us a Message',
         icon: 'whatsapp',
+        img: 'https://firebasestorage.googleapis.com/v0/b/tikka-1f350.appspot.com/o/chat.png?alt=media&token=a40ad037-5d5e-484a-b6a5-5d9ff78ca68f',
         onPress : () => {},
         id: 6,
         cstyle: cstyleb,
@@ -123,6 +129,7 @@ class HomeScreen extends Component {
       {
         actionName: 'Find a Mechanic',
         icon: 'wrench',
+        img: 'https://firebasestorage.googleapis.com/v0/b/tikka-1f350.appspot.com/o/mechanic.png?alt=media&token=eccf8c96-bbae-475d-9d5c-5a93127e5636',
         onPress : () => {},
         id: 7,
         cstyle: cstyleb,
@@ -145,7 +152,8 @@ class HomeScreen extends Component {
 
     return (
       <TouchableOpacity key={item.id} style={item.cstyle} onPress={() => item.onPress()}>
-        <Icon style={item.istyle} name={item.icon} size={40} />
+        {/* <Icon style={item.istyle} name={item.icon} size={40} /> */}
+        <Image style={{height:40,width:40,alignSelf:'center'}} source={{uri:item.img}} />
         <Text style={styles.actionTitle}>{item.actionName}</Text>
       </TouchableOpacity>
     )
